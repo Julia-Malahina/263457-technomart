@@ -860,6 +860,10 @@ span {
     position: relative;
 }
 
+.block-list .price {
+  margin: 40px 0 20px 0;
+}
+
 .block-list .real-price:after {
     content: "";
     position: absolute;
@@ -869,6 +873,10 @@ span {
     height: 0;
     border: 19px solid white;
     border-left-color: #ee3643;
+}
+
+.action-img {
+  margin: 40px 0 50px 0;
 }
 
 /*-----begin logos-----*/
