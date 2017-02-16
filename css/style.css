@@ -385,6 +385,62 @@ h3 {
     background-color: #f1f5f7;
 }
 
+.panel-registration-one {
+  width: 300px;
+  margin: 0;
+  padding: 12px 0 12px 0;
+  float: right;
+  background-color: white;
+  border: none;
+}
+
+.panel-registration-name::before {
+  content: "";
+  width: 20px;
+  height: 18px;
+  position: absolute;
+  top: 100px;
+  left: 855px;
+  background: transparent url(../img/icons-sprites.png) no-repeat -10px -100px;
+}
+
+.panel-registration-exit::before {
+  content: "";
+  width: 21px;
+  height: 17px;
+  position: absolute;
+  top: 100px;
+  right: 215px;
+  background: transparent url(../img/icons-sprites.png) no-repeat -10px -531px;
+}
+
+.panel-registration-input {
+  width: 195px;
+  margin: 0;
+  padding: 0 0 0 50px;
+  /*border: 0;*/
+  border-color: white;
+  font: normal 21px/18px "Cuprum", "PT Sans", "Arial", sans-serif;
+}
+
+.panel-registration-two {
+  width: 300px;
+  float: right;
+  margin: 5px 0 0 0;
+  padding: 0;
+
+}
+
+.panel-registration-order {
+  padding: 0 0 0 15px;
+  text-decoration-line: underline;
+}
+
+.panel-registration-cabinet {
+  padding: 0 0 0 25px;
+  text-decoration-line: underline;
+}
+
 .main-menu {
     width: 100%;
     min-height: 60px;
@@ -421,6 +477,7 @@ h3 {
 }
 
 /* -----MAIN----- */
+
 .page-main {
     border: 1px solid transparent;
 }
@@ -562,6 +619,7 @@ span {
 }
 
 /*-----beginning slider-----*/
+
 .slider {
     width: 620px;
     height: 260px;
@@ -739,7 +797,8 @@ span {
     box-shadow: 1px 1px 15px 5px #b4b8bf;
 }
 
-.block-list .actions {
+.block-list .actions,
+.block-list .selection{
     position: absolute;
     top: 0;
     left: 0;
@@ -751,12 +810,16 @@ span {
 }
 
 .block-list .actions .buy,
-.block-list .actions .bookmark {
+.block-list .selection .buy,
+.block-list .actions .bookmark,
+.block-list .selection .bookmark{
     margin: 0 auto;
 }
 
 .block-list .actions .buy,
-.block-list .actions .bookmark {
+.block-list .selection .buy,
+.block-list .actions .bookmark,
+.block-list .selection .bookmark{
     display: block;
     width: 129px;
     margin-bottom: 7px;
@@ -769,22 +832,29 @@ span {
     border-radius: 3px;
 }
 
-.block-list .actions .buy:hover {
+.block-list .actions .buy:hover,
+.block-list .selection .buy:hover {
     background-color: #5fbb2d;
     border: 3px solid #5fbb2d;
 }
 
-.block-list .actions .buy:active {
+.block-list .actions .buy:active,
+.block-list .selection .buy:active {
     background-color: #518534;
     border: 3px solid #518534;
 }
 
-.block-list .actions {
+.block-list .actions,
+.block-list .selection {
     display: none;
 }
 
 .block-list:hover .actions {
     display: block;
+}
+
+.block-list:hover .selection {
+  display: block;
 }
 
 .block-list .actions .bookmark {
@@ -877,6 +947,69 @@ span {
 
 .action-img {
   margin: 40px 0 50px 0;
+}
+
+.paginator {
+  clear: both;
+  width: 600px;
+  margin: 50px 0 60px 0;
+  padding: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.paginator .btn {
+  min-width: 46px;
+  padding: 12px 0 12px  0;
+  margin: 0 6px 0 0;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 18px;
+  border-radius: 2px;
+  background-color: white;
+  border: 1px solid #e5e5e5;
+  color: #000000;
+}
+
+.btn.one {
+  background-color: #ee3643;
+  color: white;
+}
+
+.paginator .btn:hover,
+.paginator .next:hover {
+  border: 1px solid #bdc6ca;
+  background-color: white;
+  color: #000000;
+}
+
+.paginator .btn:active,
+.paginator .next:active {
+  border: 1px solid #ee3643;
+  background-color: white;
+  color: #000000;
+}
+
+.paginator .next {
+  min-width: 258px;
+  padding: 12px 0 12px 0;
+  margin: 0 0 0 -3px;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 18px;
+  border-radius: 2px;
+  background-color: white;
+  border: 1px solid #e5e5e5;
+  color: #000000;
+  text-transform: uppercase;
 }
 
 /*-----begin logos-----*/
@@ -1524,12 +1657,29 @@ input[type="radio"]{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-
 }
 
 .first-list-goods {
     margin: 15px 20px 15px 0;
     padding: 0;
+}
+
+.block-product {
+  display: flex;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  background-color: #f2f6f8;
+}
+
+.block-product-information {
+  margin: auto;
+  padding: 65px 0 70px 0;
+}
+
+.block-product-information-text {
+  margin: 0;
+  padding: 0;
+  font: normal 13px/24px "PT Sans", "Arial", sans-serif;
 }
 
 
